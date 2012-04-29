@@ -1,8 +1,8 @@
 
-Name:       libXxf86dga
+Name:       libxxf86dga
 Summary:    X.Org X11 libXxf86dga runtime library
 Version:    1.1.2
-Release:    1
+Release:    2.5
 Group:      System/Libraries
 License:    MIT
 URL:        http://www.x.org/
@@ -38,7 +38,7 @@ Client development library for the XFree86-DGA extension.
 
 
 %build
-
+export LDFLAGS+=" -Wl,--hash-style=both -Wl,--as-needed"
 %reconfigure --disable-static
 make %{?jobs:-j%jobs}
 
