@@ -7,6 +7,7 @@ Group:      System/Libraries
 License:    MIT
 URL:        http://www.x.org/
 Source0:    http://xorg.freedesktop.org/releases/individual/lib/%{name}-%{version}.tar.gz
+Source1001: packaging/libxxf86dga.manifest 
 Requires(post): /sbin/ldconfig
 Requires(postun): /sbin/ldconfig
 BuildRequires:  pkgconfig(xorg-macros)
@@ -38,6 +39,7 @@ Client development library for the XFree86-DGA extension.
 
 
 %build
+cp %{SOURCE1001} .
 export LDFLAGS+=" -Wl,--hash-style=both -Wl,--as-needed"
 %reconfigure --disable-static
 make %{?jobs:-j%jobs}
@@ -58,6 +60,7 @@ rm -rf %{buildroot}
 
 
 %files
+%manifest libxxf86dga.manifest
 %defattr(-,root,root,-)
 %doc COPYING ChangeLog
 %{_libdir}/libXxf86dga.so.1
@@ -65,6 +68,7 @@ rm -rf %{buildroot}
 
 
 %files devel
+%manifest libxxf86dga.manifest
 %defattr(-,root,root,-)
 %{_libdir}/libXxf86dga.so
 %{_libdir}/pkgconfig/xxf86dga.pc
