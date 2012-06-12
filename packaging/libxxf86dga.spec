@@ -3,7 +3,7 @@ Name:       libxxf86dga
 Summary:    X.Org X11 libXxf86dga runtime library
 Version:    1.1.2
 Release:    2.5
-Group:      System/Libraries
+Group:      Graphics/X Window System
 License:    MIT
 URL:        http://www.x.org/
 Source0:    http://xorg.freedesktop.org/releases/individual/lib/%{name}-%{version}.tar.gz
