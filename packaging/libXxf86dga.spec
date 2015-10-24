@@ -1,6 +1,6 @@
 Summary: X.Org X11 libXxf86dga runtime library
 Name: libXxf86dga
-Version: 1.1.3
+Version: 1.1.4
 Release: 1
 License: MIT
 Group: System Environment/Libraries
@@ -54,7 +54,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-,root,root,-)
 /usr/share/license/%{name}
-%doc COPYING ChangeLog README
+%doc COPYING README
 %{_libdir}/libXxf86dga.so.1
 %{_libdir}/libXxf86dga.so.1.0.0
 
